@@ -92,7 +92,7 @@ typedef unsigned int word;
 
 #define bit(b) (1UL << (b))
 
-typedef bool boolean ;
+//typedef bool boolean ;
 typedef uint8_t byte ;
 
 #ifdef __cplusplus

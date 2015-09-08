@@ -75,13 +75,9 @@ extern void PIO_PullUp( Pio *pPio, const uint32_t dwMask, const uint32_t dwPullU
  */
 extern void PIO_SetDebounceFilter( Pio* pPio, const uint32_t dwMask, const uint32_t dwCuttOff )
 {
-#if (defined _SAM3S_) || (defined _SAM3S8_) || (defined _SAM3N_)
-    pPio->PIO_IFSCER = dwMask ; /* set Debouncing, 0 bit field no effect */
-#elif (defined _SAM3XA_) || (defined _SAM3U_)
+
     pPio->PIO_DIFSR = dwMask ; /* set Debouncing, 0 bit field no effect */
-#else
-    #error "The specified chip is not supported."
-#endif
+
     pPio->PIO_SCDR = ((32678/(2*(dwCuttOff))) - 1) & 0x3FFF; /* the lowest 14 bits work */
 }
 
@@ -243,19 +239,6 @@ extern void PIO_SetInput( Pio* pPio, uint32_t dwMask, uint32_t dwAttribute )
     }
 
     /* Enable de-glitch or de-bounce if necessary */
-#if (defined _SAM3S_) || (defined _SAM3S8_) || (defined _SAM3N_)
-    if ( dwAttribute & PIO_DEGLITCH )
-    {
-        pPio->PIO_IFSCDR = dwMask ;
-    }
-    else
-    {
-        if ( dwAttribute & PIO_DEBOUNCE )
-        {
-            pPio->PIO_IFSCER = dwMask ;
-        }
-    }
-#elif (defined _SAM3U_) || (defined _SAM3XA_)
     if ( dwAttribute & PIO_DEGLITCH )
     {
         pPio->PIO_SCIFSR = dwMask ;
@@ -267,9 +250,7 @@ extern void PIO_SetInput( Pio* pPio, uint32_t dwMask, uint32_t dwAttribute )
             pPio->PIO_SCIFSR = dwMask ;
         }
     }
-#else
-    #error "The specified chip is not supported."
-#endif
+
 
     /* Configure pin as input */
     pPio->PIO_ODR = dwMask ;

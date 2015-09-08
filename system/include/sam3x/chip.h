@@ -23,6 +23,7 @@
  * Core and peripherals registers definitions
  */
 #include "sam3x.h"
+#include "stdint.h"
 
 /* Define attribute */
 #if defined (  __GNUC__  ) /* GCC CS3 */
@@ -41,7 +42,7 @@
 /*
  * Peripherals
  */
-//#include "include/adc.h"
+#include "adc.h"
 /*
 #include "include/interrupt_sam_nvic.h"
 #include "include/efc.h"
@@ -49,7 +50,10 @@
 */
 #include "pio.h"
 /*
-#include "include/pmc.h"
+ */
+
+#include "pmc.h"
+/*
 #include "include/pwmc.h"
 #include "include/rstc.h"
 #include "include/rtc.h"
