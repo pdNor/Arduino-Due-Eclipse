@@ -5,5 +5,8 @@ This project is based on the arduino due template found [here](http://sourceforg
 In order to compile the project, the symbol SAM3X8E must be defined.
 
 ##Issues
-Strange error in syscalls.h line 43 removed
-Check all warnings
+2. 
+..*Strange error in syscalls.h line 43 removed
+..*Check all warnings
+..*In order to compile the project, the symbol SAM3X8E must be defined.
+..*In order to compile the project, the symbol F_CPU must be defined.

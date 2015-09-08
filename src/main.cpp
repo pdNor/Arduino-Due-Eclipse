@@ -19,13 +19,13 @@
 // parte presa da esempio atmel
 int main(int argc, char* argv[]) {
 
+	//init();
     WDT->WDT_MR = WDT_MR_WDDIS;
     pinMode(13,OUTPUT);
     while(1){
-    delay(100);
     digitalWrite(13,LOW);
-    delay(100);
     digitalWrite(13,HIGH);
+    analogWrite(A1,220);
     }
 
 }
