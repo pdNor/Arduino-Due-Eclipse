@@ -24,8 +24,6 @@ int main(int argc, char* argv[]) {
     pinMode(13,OUTPUT);
     while(1){
     digitalWrite(13,LOW);
-    digitalWrite(13,HIGH);
-    analogWrite(A1,220);
     }
 
 }

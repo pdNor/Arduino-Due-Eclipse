@@ -60,7 +60,9 @@
 #include "include/rtt.h"
 #include "include/spi.h"
 #include "include/ssc.h"
-#include "include/tc.h"
+*/
+#include "tc.h"
+/*
 #include "include/twi.h"
 #include "include/usart.h"
 #include "include/wdt.h"
