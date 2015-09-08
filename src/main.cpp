@@ -27,6 +27,7 @@ int main(int argc, char* argv[]) {
     delayMicroseconds(1000000);
     digitalWrite(13,LOW);
     delay(1000);
+    //analogWrite(A0,100); Needs fixing
     }
 
 }

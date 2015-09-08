@@ -5,10 +5,12 @@ This project is based on the arduino due template found [here](http://sourceforg
 ##Notes
 1. delay function rewritten not calibrated. wiring.c
 
-##Issues
+##Issues 
  
 1. Strange error in syscalls.h line 43 removed
 2. Check all warnings
 3. In order to compile the project, the symbol SAM3X8E must be defined.
 4. In order to compile the project, the symbol F_CPU must be defined.
 5. Calibrate delay function.
+6. analogWrite functions
+7. Interrupt functions
