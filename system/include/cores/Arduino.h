@@ -28,11 +28,11 @@
 // some libraries and sketches depend on this
 // AVR stuff, assuming Arduino.h or WProgram.h
 // automatically includes it...
-//#include <avr/pgmspace.h>
+#include <pgmspace.h>
 //#include <avr/interrupt.h>
 
 //#include "binary.h"
-//#include "itoa.h"
+#include "itoa.h"
 
 #ifdef __cplusplus
 extern "C"{
@@ -177,10 +177,10 @@ extern const PinDescription g_APinDescription[] ;
 } // extern "C"
 
 //#include "WCharacter.h"
-//#include "WString.h"
+#include "WString.h"
 //#include "Tone.h"
 //#include "WMath.h"
-//#include "HardwareSerial.h"
+#include "HardwareSerial.h"
 //#include "wiring_pulse.h"
 
 #endif // __cplusplus
