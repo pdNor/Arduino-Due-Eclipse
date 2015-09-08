@@ -23,7 +23,10 @@ int main(int argc, char* argv[]) {
     WDT->WDT_MR = WDT_MR_WDDIS;
     pinMode(13,OUTPUT);
     while(1){
+    digitalWrite(13,HIGH);
+    delayMicroseconds(1000000);
     digitalWrite(13,LOW);
+    delay(1000);
     }
 
 }

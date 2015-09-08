@@ -18,6 +18,7 @@
 
 #include "Arduino.h"
 
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -74,12 +75,19 @@ uint32_t micros( void )
 
 void delay( uint32_t ms )
 {
-    if (ms == 0)
+	while( 0 < ms )
+	{
+		delayMicroseconds(1000);
+		--ms;
+	}
+  /*  if (ms == 0)
         return;
     uint32_t start = GetTickCount();
     do {
-        yield();
+        //yield();
     } while (GetTickCount() - start < ms);
+    */
+
 }
 
 #if defined ( __ICCARM__ ) /* IAR Ewarm 5.41+ */

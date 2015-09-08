@@ -66,8 +66,9 @@
 #include "include/twi.h"
 #include "include/usart.h"
 #include "include/wdt.h"
-
-#include "include/timetick.h"
+*/
+#include "timetick.h"
+/*
 #include "include/USB_device.h"
 #include "include/USB_host.h"
 
