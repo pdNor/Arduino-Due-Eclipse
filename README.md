@@ -7,10 +7,12 @@ This project is based on the arduino due template found [here](http://sourceforg
 
 ##Issues 
  
-1. Strange error in syscalls.h line 43 removed
+1. Strange error in syscalls.h line 43 removed (ugly solution)
 2. Check all warnings
 3. In order to compile the project, the symbol SAM3X8E must be defined.
 4. In order to compile the project, the symbol F_CPU must be defined.
 5. Calibrate delay function.
-6. analogWrite functions
-7. Interrupt functions
+6. analogWrite functions.
+7. Interrupt functions.
+8. Uncommented code in _write.c to prevent multiple declaration. (ugly solution)
+9. syscals_sam3x.c _sbrk removed to prevent multiple declarations.(ugly solution)
