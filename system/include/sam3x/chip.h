@@ -51,12 +51,11 @@
 #include "include/gpbr.h"
 */
 #include "pio.h"
-/*
- */
-
 #include "pmc.h"
 /*
-#include "include/pwmc.h"
+ */
+#include "pwmc.h"
+/*
 #include "include/rstc.h"
 #include "include/rtc.h"
 #include "include/rtt.h"
@@ -64,6 +63,7 @@
 #include "include/ssc.h"
 */
 #include "tc.h"
+#include "dacc.h"
 /*
 #include "include/twi.h"
 #include "include/usart.h"
