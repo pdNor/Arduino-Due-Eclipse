@@ -44,7 +44,9 @@
  */
 #include "adc.h"
 /*
-#include "include/interrupt_sam_nvic.h"
+*/
+#include "interrupt_sam_nvic.h"
+/*
 #include "include/efc.h"
 #include "include/gpbr.h"
 */

@@ -192,7 +192,7 @@ extern const PinDescription g_APinDescription[] ;
 #include "wiring_digital.h"
 #include "wiring_analog.h"
 //#include "wiring_shift.h"
-//#include "WInterrupts.h"
+#include "WInterrupts.h"
 
 //#include "watchdog.h"
 

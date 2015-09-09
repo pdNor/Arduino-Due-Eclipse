@@ -22,7 +22,7 @@
 // Currently only the output and error file descriptors are tested,
 // and the characters are forwarded to the trace device, mainly
 // for demonstration purposes.
-
+/*
 ssize_t
 _write (int fd, const char* buf, size_t nbyte);
 
@@ -41,7 +41,7 @@ _write (int fd __attribute__((unused)), const char* buf __attribute__((unused)),
   errno = ENOSYS;
   return -1;
 }
-
+*/
 // ----------------------------------------------------------------------------
 
 #endif // !defined(OS_USE_SEMIHOSTING) && !(__STDC_HOSTED__ == 0)
