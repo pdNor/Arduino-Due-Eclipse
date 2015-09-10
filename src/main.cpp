@@ -28,7 +28,9 @@ int main() {
     pinMode(A0,OUTPUT);
     pinMode(13,OUTPUT);
     analogWrite(A0,155);
-    lcd.write("Hej Jeppe");
+    lcd.write("Hello World");
+    lcd.setCursor(0,1);
+    lcd.write("Calvin mini");
 
     while(1){				//Run loop
     	digitalWrite(13,HIGH);
